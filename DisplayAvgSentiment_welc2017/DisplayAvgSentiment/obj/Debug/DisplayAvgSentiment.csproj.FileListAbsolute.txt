@@ -30,3 +30,6 @@ C:\Users\amynic\Documents\Data Science\Reasons\DisplayAvgSentiment_Welcome2017\D
 C:\Users\amynic\Documents\Data Science\Reasons\DisplayAvgSentiment_welc2017\DisplayAvgSentiment\bin\Debug\DisplayAvgSentiment.exe.config
 C:\Users\amynic\Documents\Data Science\Reasons\DisplayAvgSentiment_welc2017\DisplayAvgSentiment\obj\Debug\DisplayAvgSentiment.exe
 C:\Users\amynic\Documents\Data Science\Reasons\DisplayAvgSentiment_welc2017\DisplayAvgSentiment\obj\Debug\DisplayAvgSentiment.pdb
+C:\Users\likasem\OneDrive\Source\TwitterSentimentOrb\DisplayAvgSentiment_welc2017\DisplayAvgSentiment\bin\Debug\DisplayAvgSentiment.exe.config
+C:\Users\likasem\OneDrive\Source\TwitterSentimentOrb\DisplayAvgSentiment_welc2017\DisplayAvgSentiment\obj\Debug\DisplayAvgSentiment.exe
+C:\Users\likasem\OneDrive\Source\TwitterSentimentOrb\DisplayAvgSentiment_welc2017\DisplayAvgSentiment\obj\Debug\DisplayAvgSentiment.pdb

@@ -46,8 +46,15 @@ namespace TwitterClient
             SentimentResult sentimentResult = JsonConvert.DeserializeObject<SentimentResult>(content);
             Console.WriteLine("Sentiment score: " + sentimentResult.Score);
             Console.WriteLine("Tweet: " + inputText);
-            //IF statement to check for 0 Exception
-            return (int)(sentimentResult.Score * 100);
+
+            int sentimentScore = (int)(sentimentResult.Score * 100);
+
+            if(sentimentScore <= 0)
+            {
+                sentimentScore = 0;
+            }
+
+            return sentimentScore;
         }
 
         static void Main(string[] args)

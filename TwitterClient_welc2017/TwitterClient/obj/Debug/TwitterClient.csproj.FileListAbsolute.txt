@@ -176,3 +176,6 @@ C:\Users\amynic\Documents\Data Science\Reasons\TwitterClient_Welcome2017\Twitter
 C:\Users\amynic\Documents\Data Science\Reasons\TwitterClient_welc2017\TwitterClient\bin\Debug\TwitterClient.exe.config
 C:\Users\amynic\Documents\Data Science\Reasons\TwitterClient_welc2017\TwitterClient\obj\Debug\TwitterClient.exe
 C:\Users\amynic\Documents\Data Science\Reasons\TwitterClient_welc2017\TwitterClient\obj\Debug\TwitterClient.pdb
+C:\Users\likasem\OneDrive\Source\TwitterSentimentOrb\TwitterClient_welc2017\TwitterClient\bin\Debug\TwitterClient.exe.config
+C:\Users\likasem\OneDrive\Source\TwitterSentimentOrb\TwitterClient_welc2017\TwitterClient\obj\Debug\TwitterClient.exe
+C:\Users\likasem\OneDrive\Source\TwitterSentimentOrb\TwitterClient_welc2017\TwitterClient\obj\Debug\TwitterClient.pdb
