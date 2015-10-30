@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Microsoft.ServiceBus.Messaging;
-using Microsoft.ServiceBus;
-using Microsoft.WindowsAzure;
 using System.Net.Http;
-using System.Net.Http.Formatting;
-using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace DisplayAvgSentiment
 {
@@ -38,23 +32,15 @@ namespace DisplayAvgSentiment
                 {
                     try
                     {
-                        string message = Encoding.UTF8.GetString(data.GetBytes());
-                        string value = message.Substring(16,4);
-                        var avg = Convert.ToDouble(value);
-                        var integerValue = Convert.ToInt16(avg);
+                        var result = Encoding.UTF8.GetString(data.GetBytes());
+                        dynamic resultJson = JObject.Parse(result);
+                        var avgScore = resultJson.avgsentiment;
 
-                        Console.WriteLine(message);
-                        Console.WriteLine(value);
-                        Console.WriteLine(integerValue);
-
-                        //var result = Encoding.UTF8.GetString(data.GetBytes());
-                        //var eventHubResult = JsonConvert.DeserializeObject<SentimentData>(result);
-                        //var score = Convert.ToInt16(eventHubResult.AverageSentiment);
-                        //Console.WriteLine(score);
-                        //Console.WriteLine();
+                        Console.WriteLine(result);
+                        Console.WriteLine("Average Score: " + avgScore + "\n");
 
                         //create sentimentdata object
-                        var sentimentData = new SentimentData() { AverageSentiment = integerValue, EventHubName = ehName };
+                        var sentimentData = new SentimentData() { AverageSentiment = avgScore, EventHubName = ehName };
 
                         //post sentimentdata to api
                         using (var client = new HttpClient())
