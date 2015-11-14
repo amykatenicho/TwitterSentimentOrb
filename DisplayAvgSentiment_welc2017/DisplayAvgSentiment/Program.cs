@@ -17,8 +17,25 @@ namespace DisplayAvgSentiment
 
         static void Main(string[] args)
         {
+            /* Get event hub name and service bus connection string from user input. Basic use is to ask user:
+             * Which Event Hub are we listening for a message from? (where is the AverageSentiment number coming from?)
+            */
+
+            //string ehName = "";
+            //string connection = "";
+
+            //Console.WriteLine("Enter Event Hub Name: ");
+            //ehName = Console.ReadLine();
+            //Console.WriteLine("Enter Service Bus Connection String: ");
+            //connection = Console.ReadLine() + ";TransportType=Amqp";
+
+            //Console.WriteLine("START\n");
+
+
+            //Comment out these two string if using the user input code above
             string ehName = "EVENT HUB NAME";
             string connection = "Endpoint=sb://SERVICEBUSNAMESPACE.servicebus.windows.net/;SharedAccessKeyName=ACCESSKEYNAME;SharedAccessKey=ACCESSKEY;TransportType=Amqp";
+
             MessagingFactory factory = MessagingFactory.CreateFromConnectionString(connection);
             EventHubClient ehub = factory.CreateEventHubClient(ehName);
             EventHubConsumerGroup group = ehub.GetDefaultConsumerGroup();

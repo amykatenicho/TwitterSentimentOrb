@@ -59,6 +59,31 @@ namespace TwitterClient
 
         static void Main(string[] args)
         {
+            /* Get hashtag phrase that will be listened to / analysed by the Text Analytics API from user input. Basic use is to ask user:
+             * Which hashtag do you want to listen to?
+             * Which Event Hub do you want to send the sentiment score to?
+            */
+
+            //string hashtag = "microsoft";
+            //string eventhubName = "";
+            //string eventhubConn = "";
+
+            //Console.WriteLine("Enter hashtag phrase (without the #): ");
+            //hashtag = Console.ReadLine();
+            //ConfigurationManager.AppSettings["twitter_keywords"] = hashtag;
+            //Console.WriteLine("Enter Event Hub Name: ");
+            //eventhubName = Console.ReadLine();
+            //Console.WriteLine("Enter Event Hub Connection String: ");
+            //eventhubConn = Console.ReadLine();
+
+            //var config = new EventHubConfig();
+            //config.ConnectionString = eventhubConn;
+            //config.EventHubName = eventhubName;
+            //var myEventHubObserver = new EventHubObserver(config);
+
+            //Console.WriteLine("START\n");
+
+
             //Configure Twitter OAuth
             var oauthToken = ConfigurationManager.AppSettings["oauth_token"];
             var oauthTokenSecret = ConfigurationManager.AppSettings["oauth_token_secret"];
@@ -67,7 +92,7 @@ namespace TwitterClient
             var keywords = ConfigurationManager.AppSettings["twitter_keywords"];
             var accountKey = ConfigurationManager.AppSettings["accountkey"];
 
-            //Configure EventHub
+            //Configure EventHub (comment this out if using user input code above)
             var config = new EventHubConfig();
             config.ConnectionString = ConfigurationManager.AppSettings["EventHubConnectionString"];
             config.EventHubName = ConfigurationManager.AppSettings["EventHubName"];
